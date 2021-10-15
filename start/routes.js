@@ -1,5 +1,8 @@
 'use strict'
 
+const { route } = require('@adonisjs/framework/src/Route/Manager');
+const LoginController = require('../app/Controllers/Http/LoginController');
+
 /*
 |--------------------------------------------------------------------------
 | Routes
@@ -15,7 +18,13 @@
 
 /** @type {typeof import('@adonisjs/framework/src/Route/Manager')} */
 const Route = use('Route')
-
-Route.get('/', 'TaskController.index')
-Route.post('tasks', 'TaskController.store')
-Route.delete('tasks/:id', 'TaskController.destroy')
+Route.get('/', 'LoginController.index');
+Route.post('/login', 'LoginController.login');
+Route.get('/bemvindo', 'WelcomeController.bemVindo');
+Route.get('/logout','LoginController.logout');
+Route.get('/closet', 'ClothingController.index');
+Route.get('/closet/novo', 'ClothingController.criar');
+Route.get('/closet/editar/:id', 'ClothingController.editar'); 
+Route.post('/closet/salvar', 'ClothingController.salvar');
+Route.post('/closet/editarClothing/:id', 'ClothingController.editarClothing');
+Route.get('/closet/deletar/:id','ClothingController.deletar');

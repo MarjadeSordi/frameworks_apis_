@@ -1,0 +1,37 @@
+.form{
+  border: solid 1px #000000;
+  width: 550px; 
+  padding: 20px;
+  margin: 100px auto;
+  border-radius: 20px;
+}
+
+h2 {
+  text-align: left;
+  margin-left: 10px;
+}
+
+label{
+  font-family:  Tahoma,  sans-serif;
+  margin: 10px;
+}
+
+input {
+  border-radius: 8px;
+  margin-left: 10px;
+}
+
+button {
+  background-color: #000000;
+  padding: 8px;
+  color: #ffffff;
+  border-radius: 20px;
+  margin-left: 15px;
+  width: 150px;
+  margin-top: 10px;
+}
+
+button:hover{
+  background-color: #ffffff;
+  color:#000000;
+}

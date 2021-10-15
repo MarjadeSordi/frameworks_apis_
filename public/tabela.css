@@ -1,0 +1,70 @@
+.sessionTable{
+  width: 100%;
+  margin-top: 10px;
+  overflow-y: scroll;
+}
+
+.firstTitle {
+  font-style: bold;
+  font-family:  Tahoma, sans-serif;
+  font-size: 24px;
+  margin-left: 20px;
+  margin-top: 50px;
+}
+
+.seasonTitle{
+  font-family:  Tahoma, sans-serif;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  font-size: 24px;
+  margin-top: 10px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 80%;
+  margin-left: 20px;
+}
+td, th {
+  border: 1px solid #dddddd;
+  padding: 8px;
+  text-align: 8px; 
+
+}
+
+.buttonNew {
+  background-color: black;
+  width: 200px;
+  margin-left: 20px;
+  margin-top: 40px;
+  padding: 8px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.buttonNew:hover{
+  background-color: white;
+}
+
+.aNew {
+  text-decoration: none;
+  color: white;
+}
+.aNew:hover {
+  color: black;
+}
+
+.editdelete{
+  text-decoration: none;
+  color: white;
+  background-color: black;
+  padding: 4px;
+  border-radius: 14px;
+}
+
+.editdelete:hover {
+  color: black;
+  background-color: white;
+}

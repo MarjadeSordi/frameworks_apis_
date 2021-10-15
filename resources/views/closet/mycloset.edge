@@ -1,0 +1,163 @@
+@layout('template')
+
+@section('view')
+  <title> Meu Closet </title>
+</head>
+{{style('/tabela.css')}}
+
+  @if(old('notification'))
+  {{ old('notification')}}
+  @endif
+
+  <div class='sessionTable'> 
+
+
+  @if(clothings && clothings.length > 0)
+  <h1 class='firstTitle'>  Inverno </h1>
+  <table>
+    <tr>
+      <th> Peça </th> 
+      <th> Estação </th> 
+      <th> Estampa  </th> 
+      <th> Cor </th> 
+      <th> Tamanho  </th> 
+      <th>  Marca </th> 
+      <th>  Editar </th> 
+      <th>  Deletar </th> 
+    </tr>
+    @each(clothing in clothings)    
+
+    @if(clothing.season === 'inverno')
+
+    <tr>
+      <td> {{clothing.type_of}} </td> 
+      <td> {{clothing.season }}  </td> 
+      <td> {{clothing.print}} </td> 
+      <td> {{clothing.color}}  </td> 
+      <td> {{clothing.size}}  </td> 
+      <td> {{clothing.brand}}  </td> 
+      <td> <a href="{{'/closet/editar/'+clothing.id}}" class='editdelete'>  Editar </a> </td> 
+      <td> <a href="{{'/closet/deletar/'+clothing.id}}" class='editdelete'>Deletar </a> </td> 
+    </tr>
+ 
+    @endif 
+    
+    @endeach
+  </table> 
+  @else 
+  <h2> Nao existem peças </h2>
+  @endif
+
+  @if(clothings && clothings.length > 0)
+  <h1 class='seasonTitle'>  Outono </h1>
+  <table>
+    <tr>
+      <th> Type </th> 
+      <th> Estação </th> 
+      <th> Estampa  </th> 
+      <th> Cor </th> 
+      <th> Tamanho  </th> 
+      <th>  Marca </th> 
+      <th>  Editar </th> 
+      <th>  Deletar </th> 
+    </tr>
+    @each(clothing in clothings)    
+
+    @if(clothing.season === 'outono')
+
+    <tr>
+      <td> {{clothing.type_of}} </td> 
+      <td> {{clothing.season }}  </td> 
+      <td> {{clothing.print}} </td> 
+      <td> {{clothing.color}}  </td> 
+      <td> {{clothing.size}}  </td> 
+      <td> {{clothing.brand}}  </td> 
+      <td> <a href="{{'/closet/editar/'+clothing.id}}" class='editdelete'>  Editar </a> </td> 
+      <td> <a href="{{'/closet/deletar/'+clothing.id}}" class='editdelete'>Deletar </a> </td> 
+    </tr>
+ 
+    @endif 
+    
+    @endeach
+  </table> 
+  @else 
+  <h2 > Nao existem peças </h2>
+  @endif
+
+  @if(clothings && clothings.length > 0)
+  <h1 class='seasonTitle'>  Verão </h1>
+  <table>
+    <tr>
+      <th> Type </th> 
+      <th> Estação </th> 
+      <th> Estampa  </th> 
+      <th> Cor </th> 
+      <th> Tamanho  </th> 
+      <th>  Marca </th> 
+      <th>  Editar </th> 
+      <th>  Deletar </th> 
+    </tr>
+    @each(clothing in clothings)    
+
+    @if(clothing.season === 'verão')
+
+    <tr>
+      <td> {{clothing.type_of}} </td> 
+      <td> {{clothing.season }}  </td> 
+      <td> {{clothing.print}} </td> 
+      <td> {{clothing.color}}  </td> 
+      <td> {{clothing.size}}  </td> 
+      <td> {{clothing.brand}}  </td> 
+      <td> <a href="{{'/closet/editar/'+clothing.id}}" class='editdelete'>  Editar </a> </td> 
+      <td> <a href="{{'/closet/deletar/'+clothing.id}}" class='editdelete'>Deletar </a> </td> 
+    </tr>
+ 
+    @endif 
+    
+    @endeach
+  </table> 
+  @else 
+  <h2> Nao existem peças </h2>
+  @endif
+
+
+  @if(clothings && clothings.length > 0)
+  <h1 class='seasonTitle'>  Primavera </h1>
+  <table>
+    <tr>
+      <th> Type </th> 
+      <th> Estação </th> 
+      <th> Estampa  </th> 
+      <th> Cor </th> 
+      <th> Tamanho  </th> 
+      <th>  Marca </th> 
+      <th>  Editar </th> 
+      <th>  Deletar </th> 
+    </tr>
+    @each(clothing in clothings)    
+
+    @if(clothing.season === 'primavera')
+
+    <tr>
+      <td> {{clothing.type_of}} </td> 
+      <td> {{clothing.season }}  </td> 
+      <td> {{clothing.print}} </td> 
+      <td> {{clothing.color}}  </td> 
+      <td> {{clothing.size}}  </td> 
+      <td> {{clothing.brand}}  </td> 
+      <td> <a href="{{'/closet/editar/'+clothing.id}}" class='editdelete'>  Editar </a> </td> 
+      <td> <a href="{{'/closet/deletar/'+clothing.id}}" class='editdelete'> Deletar </a> </td> 
+    </tr>
+ 
+    @endif 
+    
+    @endeach
+  </table> 
+  @else 
+  <h2> Nao existem peças </h2>
+  @endif 
+  <div class='buttonNew'> 
+  <a href="/closet/novo" class='aNew'>Nova peça</a>
+  </div> 
+</div> 
+@endsection
