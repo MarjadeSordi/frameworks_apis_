@@ -1,0 +1,76 @@
+@layout('template')
+
+@section('view')
+{{style('/formularios.css')}}
+  @if(clothing)
+
+  <div class='form'>  
+  <h2> Editar: </h2>
+  <form action="{{'/closet/editarClothing/'+clothing.id}}" method="POST"> 
+    {{ csrfField() }}
+    
+   <label for='type_of'> Tipo: </label> <br>
+   <input type='text' id='type_of' name='type_of' value={{clothing.type_of}}> 
+   <br />
+  
+   <label for='season'> Estação: </label><br>
+   <input type='text' id='season' name="season" value={{clothing.season}} > 
+   <br />
+
+   <label for='print'> Estampa : </label><br>
+   <input type='text' id='print' name='print' value={{clothing.print}}>
+   <br/>
+
+   <label for='color'> Cor: </label><br>
+   <input type='text' id='color' name="color" value={{clothing.color}}> 
+   <br />
+   <br />
+   <label for='size'> Tamanho: </label><br>
+   <input type='text' id='size' name="size" value={{clothing.size}}> 
+   <br />
+   <label for='brand'> Marca: </label><br>
+   <input type='text' id='brand' name="brand" value={{clothing.brand}}> 
+   <br />
+   <br />
+   <button type='submit' > <span> Salvar </span> </button>
+ </form>
+</div>
+ @else 
+ <div class='form'>  
+ <h2> New Clothings  </h2>
+ <form action='/closet/salvar' method="POST"> 
+  {{ csrfField() }}
+      
+  <label for='type_of'> Tipo: </label><br>
+  <input type='text' id='type_of' name='type_of' /> 
+  <br>
+  <label for='color'> Cor: </label><br>
+  <input type='text' id='color' name="color" />  
+  <br>
+  <label for='print'> Estampa : </label><br>
+  <input type='text' id='print' name='print' />
+  <br>
+
+  <label for='season'> Estação: </label><br>
+  <input type='text' id='season' name="season" /> 
+  <br> 
+
+  <label for='brand'> Marca: </label><br>
+  <input type='text' id='brand' name="brand" /> 
+  <br>
+
+  <label for='expiration_type'> Teve alguma expiração para adquirir a peça? </label>
+  <input type='text' id='expiration_type' name='expiration_type' /> 
+  <br> 
+  <label for='size'> Tamanho: </label> <br>
+  <input type='text' id='size' name="size" /> 
+  <br>
+  <label for='buy_at'> Data da Compra </label> <br>
+  <input type='text' id='buy_at' name='buy_at' /> 
+  <br>
+  <button type='submit' > <span> Salvar </span> </button>
+
+</form>
+</div>
+@endif
+@endsection 

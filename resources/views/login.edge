@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>  
+  {{ style('/login.css') }}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">  
+
+  <title> Login </title>
+  
+</head>
+<body> 
+  <div class='formstyle'> 
+  <div class='formcolors'> 
+  <h1 class='formtitle'> Login </h1> 
+  <form action='/login' method="POST" class='formlogin'> 
+     {{ csrfField() }}
+    <label for='email'> E-mail: </label>
+    <input type='text' id='email' name="email"/> 
+    <br />
+    <br />
+    <label for='senha'> Senha: </label>
+    <input type='text' id='senha' name="senha" /> 
+    <br />
+    <br />
+    <button type='submit' class='button-form'> <span> Entrar </span> </button>
+  </form></div>
+</div> 
+</body>
+</html>

@@ -1,0 +1,24 @@
+@layout('template')
+
+@section('view')
+  <title> Bem Vindo </title>
+</head>
+{{style('/welcome.css')}}
+{{script('/welcome.js')}}
+
+<div class='welcomelayer'>
+ <div class='welcome'> Bem vindo {{nome}} ! </div> 
+ <div id="wrapper">
+  <br>
+  <span class="city"></span>
+  <br>
+  <span class="temp">  </span> 
+  <span class="temp_max">  </span> 
+
+  <a href='/closet' class='what'>
+    O que eu devo vestir? </a> 
+
+</div>
+ </div>
+
+ @endsection
