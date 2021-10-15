@@ -1,4 +1,4 @@
-Application built with Adonis.js  for the internet programming class.
+Application built with Adonis.js  for the frameworks and api's class.
 The purpose is to organize my closet and sort my clothes according to the season.
 On the welcome page I look for temperature information according to the user's city, and on the closet page I organize clothes by season.
 It is possible to edit the clothes after registering, and also to register new clothes.
